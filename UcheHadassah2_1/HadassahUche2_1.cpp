@@ -18,27 +18,29 @@ int main()
 }
 int factorial(int n)
 {
-	int product = 1;//Declared outside the for loop to avoid reset
+	
+
 	do
 	{
+		
 		if (n == 0)//0! = 1
 		{
 			return 1;
 		}
-		
 		else if(n > 0)
 		{
+			int product = 1;//Declared outside the for loop to avoid reset
 			for (int i = n; n > 0; n--)
 			{
 				product *= n;
 			}
+			return product;//returns the factorial
 		}
-		else
+		else if (n < 0)
 		{
-			cout << "Invalid number!";
+			cout << "Invalid input!" << endl;
+			break;
 		}
-		return product;//returns the factorial
-	} while (n > -1);// Validate User input
-	
+	} while (n < 0);
 }
 
