@@ -15,7 +15,21 @@ int main()
 }
 int factorial(int n)
 {
-
-	return factorial(n);
+	int product = 1;//Declared outside the for loop to avoid reset
+	do
+	{
+		if (n == 0)//0! = 1
+		{
+			return 1;
+		}
+		else
+		{
+			for (int i = n; n > 0; n--)
+			{
+				product *= n;
+			}
+		}
+	} while (n > -1);// Validate User input
+	return product;//returns the  factorial
 }
 
