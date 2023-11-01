@@ -13,34 +13,33 @@ int main()
 	int number;
 	cout << "Enter the number you want to work with:";
 	cin >> number;
-	cout << "f(" << number << ") = " << factorial(number) << endl;
+	if (number < 0)
+	{
+		cout << "Invalid input!" << endl;//Validates user input for numbers less than 0
+	}
+	else
+	{
+		cout << "f(" << number << ") = " << factorial(number) << endl;
+	}
 	return 0;
 }
 int factorial(int n)
 {
-	
-
 	do
 	{
-		
 		if (n == 0)//0! = 1
 		{
 			return 1;
 		}
 		else if(n > 0)
 		{
-			int product = 1;//Declared outside the for loop to avoid reset
+			int product = 1;//Declared outside the for-loop to avoid reset
 			for (int i = n; n > 0; n--)
 			{
 				product *= n;
 			}
 			return product;//returns the factorial
-		}
-		else if (n < 0)
-		{
-			cout << "Invalid input!" << endl;
-			break;
-		}
+		}	
 	} while (n < 0);
 }
 
