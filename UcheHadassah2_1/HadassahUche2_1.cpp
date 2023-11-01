@@ -10,7 +10,10 @@ using namespace std;
 int factorial(int n);//Function prototype
 int main()
 {
-
+	int number;
+	cout << "Enter the number you want to work with:";
+	cin >> number;
+	cout << "f(" << number << ") = " << factorial(number) << endl;
 	return 0;
 }
 int factorial(int n)
@@ -22,14 +25,20 @@ int factorial(int n)
 		{
 			return 1;
 		}
-		else
+		
+		else if(n > 0)
 		{
 			for (int i = n; n > 0; n--)
 			{
 				product *= n;
 			}
 		}
+		else
+		{
+			cout << "Invalid number!";
+		}
+		return product;//returns the factorial
 	} while (n > -1);// Validate User input
-	return product;//returns the  factorial
+	
 }
 
