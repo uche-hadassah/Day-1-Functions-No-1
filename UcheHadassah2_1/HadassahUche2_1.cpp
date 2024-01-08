@@ -9,7 +9,7 @@ int main()
 	int number;
 	cout << "Enter the number you want to work with:";
 	cin >> number;//Gets input from the user
-	if (number < 0)//Validates user input for numbers less than 0
+	if (number < 0)//Validates user input for numbers less than 0.
 	{
 		cout << "Invalid input!" << endl;
 	}
